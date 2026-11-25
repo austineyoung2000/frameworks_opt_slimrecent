@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Local test override for RisingOS Revived seventeen.
+     Preserves the existing project groups while selecting personal test branches.
+     Slim Recents source: ResurrectedRemixOS/frameworks_opt_slimrecent (Apache-2.0). -->
+<manifest>
+  <remote name="austin-slim-test" fetch="https://github.com/austineyoung2000" />
+  <remove-project name="android_frameworks_base-new" path="frameworks/base" />
+  <remove-project name="android_packages_apps_Launcher3" path="packages/apps/Launcher3" />
+  <project name="android_frameworks_base-new" path="frameworks/base"
+           remote="austin-slim-test" revision="refs/heads/test"
+           groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project name="android_packages_apps_Launcher3" path="packages/apps/Launcher3"
+           remote="austin-slim-test" revision="refs/heads/test"
+           groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
+  <project name="frameworks_opt_slimrecent" path="frameworks/opt/slimrecent"
+           remote="austin-slim-test" revision="refs/heads/test" />
+</manifest>
